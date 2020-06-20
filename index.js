@@ -39,7 +39,6 @@ var n1 = Math.pow(1 + monthlyInterestRate, periods);
 var numerator = principal * n1 * monthlyInterestRate;
 var denominator = n1 - 1;
 var monthlyRate = numerator/denominator;
-console.log(monthlyRate);
 
 // 🏡 Task 3: Function
 /* Create a function called `mortgageCalculator` that combines all of the steps from task 1 and 2 and returns a sentence "{Name}, your monthly rate is ${monthlyRate}"
@@ -47,8 +46,21 @@ console.log(monthlyRate);
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
 
+function mortgageCalculator() {
+    var principal = 200000;
+    var interestRate = 0.05;
+    var years = 30; 
+    var monthlyInterestRate = interestRate / 12;
+    var periods = years * 12 ;
+    var n1 = Math.pow(1 + monthlyInterestRate, periods);
+    var numerator = principal * n1 * monthlyInterestRate;
+    var denominator = n1 - 1;
+    var monthlyRate = numerator/denominator;
+    var Name = "Cassidy";
+    console.log(monthlyRate);
+};
 
-
+mortgageCalculator();
 
 
 // 🏡 Task 4: Arguments and Parameters
