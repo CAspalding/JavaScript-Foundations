@@ -46,10 +46,11 @@ var monthlyRate = numerator/denominator;
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
 
-function mortgageCalculator(P, I, N) {
+function mortgageCalculator(P, I, N, C) {
     var principal = P;
     var interestRate = I;
     var years = N; 
+    var creditScore = C;
     var monthlyInterestRate = interestRate / 12;
     var periods = years * 12 ;
     var n1 = Math.pow(1 + monthlyInterestRate, periods);
@@ -57,6 +58,11 @@ function mortgageCalculator(P, I, N) {
     var denominator = n1 - 1;
     var monthlyRate = numerator/denominator;
     var Name = "Cassidy";
+    if (C > 740) {
+       var monthlyRate = monthlyRate * 0.95;
+    } else if (C < 660 ) {
+       var monthlyRate = monthlyRate * 1.05;
+    };
     console.log(monthlyRate);
 };
 
@@ -70,7 +76,7 @@ For example,
 mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 */
 
-mortgageCalculator(200000, 0.05, 30);
+mortgageCalculator(200000, 0.05, 30, 5);
 
 
 
