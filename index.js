@@ -46,10 +46,10 @@ var monthlyRate = numerator/denominator;
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
 
-function mortgageCalculator() {
-    var principal = 200000;
-    var interestRate = 0.05;
-    var years = 30; 
+function mortgageCalculator(P, I, N) {
+    var principal = P;
+    var interestRate = I;
+    var years = N; 
     var monthlyInterestRate = interestRate / 12;
     var periods = years * 12 ;
     var n1 = Math.pow(1 + monthlyInterestRate, periods);
@@ -60,7 +60,7 @@ function mortgageCalculator() {
     console.log(monthlyRate);
 };
 
-mortgageCalculator();
+
 
 
 // 🏡 Task 4: Arguments and Parameters
@@ -70,7 +70,7 @@ For example,
 mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 */
 
-
+mortgageCalculator(200000, 0.05, 30);
 
 
 
