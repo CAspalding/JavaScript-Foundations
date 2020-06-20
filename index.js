@@ -15,8 +15,8 @@ var years = 30;
 (2) Create another variable called `periods` and give it the value of years*12.
 */
 
-
-
+var monthlyInterestRate = interestRate / 12;
+var periods = years * 12 ;
 
 // 🏡 Task 2: Harder Math
 /* Create your calculator! Use the formula in the ReadMe (also below) to run calculations on your numbers. Save the final value into a variable called monthlyRate. 
